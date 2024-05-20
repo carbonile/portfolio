@@ -5,17 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandy Nogales</title>
     <link href="src/output.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: purple;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .text {
+            flex: 1;
+        }
+        .image {
+            flex: 0 0 100px; /* Smaller image size */
+            margin-left: 20px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+        .nav-wrapper {
+            background-color: #000; /* Black background for the navbar */
+        }
+        .nav-wrapper a {
+            color: purple !important;
+        }
+        .sidenav {
+            background-color: #000;
+        }
+        .sidenav a {
+            color: purple !important;
+        }
+        table {
+            color: purple;
+        }
+        table thead {
+            background-color: #000;
+        }
+        table tbody tr:hover {
+            background-color: #333;
+        }
+    </style>
 </head>
-<body class="text-gray-900 bg-gray-100 dark:bg-gray-900 dark:text-gray-100">
-    <nav class="p-4 bg-gray-800">
-        <div class="container flex items-center justify-between mx-auto">
-            <a href="#!" class="text-lg font-bold text-white">@Brandy_Nogales:~$ <span class="blinking-cursor">|</span></a>
-            <ul class="hidden space-x-6 md:flex">
-                <li><a href="#aboutme" class="text-white">/About Me</a></li>
-                <li><a href="#projects" class="text-white">/Projects</a></li>
-                <li><a href="#courses" class="text-white">/Courses</a></li>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">@Brandy_Nogales:~$ <span class="blinking-cursor">|</span></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#aboutme">/About Me</a></li>
+                <li><a href="#projects">/Projects</a></li>
+                <li><a href="#courses">/Courses</a></li>
             </ul>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger md:hidden"><i class="text-white material-icons">menu</i></a>
         </div>
     </nav>
     
@@ -39,7 +82,7 @@
                 My recent work at ETHZ focused on exploiting system vulnerabilities and machine learning attacks. I am 
                 passionate about literature, astronomy, photography, and boxing.</p>
             </div>
-            <div class="w-full md:w-1/3">
+            <div class="w-full md:w-1/3 image">
                 <img src="images/pic_p.jpg" alt="Brandy Nogales" class="mx-auto rounded-full md:mx-0">
             </div>
         </div>
@@ -62,7 +105,7 @@
                     <td>Trained a model to detect facial expressions on human subjects from a camera and generate an avatar
                     adjusting its facial expressions in real time to mimic the emotions perceived.</td>
                     <td>Python, Machine Learning</td>
-                    <td><a href="Projects/FullyEmpathicAgent/description.pdf" target="_blank">View Description</a></td>
+                    <td><a href="https://github.com/carbonile/fully-empathic-agent" target="_blank">View Description</a></td>
                 </tr>
                 <tr>
                     <td>Article Aggregation</td>
@@ -74,7 +117,7 @@
                     <td>EMOW</td>
                     <td>Developed the "EMOW" application with React Native in collaboration with the TECFA unit to serve as an emotional companion for students.</td>
                     <td>React Native</td>
-                    <td><a href="Projects/EMOW/description.pdf" target="_blank">View Description</a></td>
+                    <td><a href="https://github.com/carbonile/emow" target="_blank">View Description</a></td>
                 </tr>
                 <tr>
                     <td>CTFs</td>
