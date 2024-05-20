@@ -1,9 +1,9 @@
 :root {
     --primary-color: #151515; 
-    --text-color: #9b59b6; 
+    --text-color: #d43fff;  /* Brighter purple */
     --nav-bg-color: #151515; 
     --body-bg-color: #151515; 
-    --link-color: #8e44ad; 
+    --link-color: #e066ff;  /* Brighter purple for links */
 }
 
 * {
@@ -37,7 +37,6 @@ body {
     padding: 20px;
 }
 
-
 /* Navbar customizations */
 .nav-wrapper {
     background-color: var(--body-bg-color); 
@@ -62,7 +61,7 @@ body {
 .brand-logo {
     font-family: 'Courier New', Courier, monospace;
     color: var(--text-color); 
-    font-size: 16px; /* Adjusted font size */
+    font-size: 20px; /* Adjusted font size */
     display: flex;
     align-items: center;
 }
@@ -70,7 +69,7 @@ body {
 /* Existing styles */
 @media screen and (max-width: 600px) {
     .brand-logo {
-        font-size: 10px; /* Even smaller font size for mobile */
+        font-size: 14px; /* Even smaller font size for mobile */
         padding-left: 5px; /* Reduce padding if necessary */
         padding-right: 5px; /* Reduce padding if necessary */
     }
@@ -79,7 +78,7 @@ body {
 /* Additional suggestion */
 @media screen and (max-width: 400px) {
     .brand-logo {
-        font-size: 8px; /* Further reduction for very small devices */
+        font-size: 12px; /* Further reduction for very small devices */
     }
 }
 
@@ -92,16 +91,17 @@ body {
 /* Table customizations to fit terminal theme */
 table, th, td {
     border: 1px solid var(--text-color); /* Purple borders */
+    font-size: 1.2em; /* Increase font size for table text */
 }
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 100%; /* Ensure table takes full width */
     background-color: var(--body-bg-color); /* Black background */
 }
 
 th, td {
-    padding: 10px;
+    padding: 15px; /* Increase padding for more spacing */
     text-align: left;
 }
 
@@ -110,7 +110,7 @@ th {
 }
 
 a {
-    color: var(--text-color); /* Purple text for links */
+    color: var(--link-color); /* Brighter purple text for links */
 }
 
 /* Custom Scrollbar */
@@ -123,11 +123,11 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #5a2a80; 
+    background: #b23fff; /* Brighter purple */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #7d3e99; 
+    background: #d66bff; /* Even brighter on hover */
 }
 
 @keyframes blink {

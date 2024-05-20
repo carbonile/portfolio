@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandy Nogales - Gallery</title>
+    <title>some souvenirs</title>
 
     <!-- Link to Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/png">
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -15,22 +15,29 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .gallery img {
-            padding: 5px; /* Add some padding around the images */
+            margin: 2px; /* Small margin between the images */
+            width: calc(33.333% - 4px); /* Ensure images fit nicely in a row */
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
     </style>
 </head>
-<body>
+<body class="text-gray-900 bg-gray-100 dark:bg-gray-900 dark:text-gray-100">
 
     <nav>
         <div class="nav-wrapper">
-            <a href="index.html" class="brand-logo">@Brandy_Nogales:~$ <span class="blinking-cursor">|</span></a>
+            <a href="index.html" class="brand-logo">@bnogales:~$ <span class="blinking-cursor">|</span></a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">/Home</a></li>
                 <li><a href="#aboutme">/About Me</a></li>
-                <li><a href="gallery.html">/Gallery</a></li>
                 <li><a href="#projects">/Projects</a></li>
                 <li><a href="#courses">/Courses</a></li>
+                <li><a href="gallery.html">/Gallery</a></li>
             </ul>
         </div>
     </nav>
@@ -38,47 +45,52 @@
     <ul class="sidenav" id="mobile-demo">
         <li><a href="index.html">/Home</a></li>
         <li><a href="#aboutme">/About Me</a></li>
-        <li><a href="gallery.html">/Gallery</a></li>
         <li><a href="#projects">/Projects</a></li>
         <li><a href="#courses">/Courses</a></li>
+        <li><a href="gallery.html">/Gallery</a></li>
     </ul>
 
-    <section id="gallery" class="section">
-        <div class="container gallery">
-            <h2 class="header">Gallery</h2>
-            <div class="row">
-                <div class="col s12 m4">
-                    <img src="images/photo1.jpg" alt="Photo 1" class="responsive-img">
-                </div>
-                <div class="col s12 m4">
-                    <img src="images/photo2.jpg" alt="Photo 2" class="responsive-img">
-                </div>
-                <div class="col s12 m4">
-                    <img src="images/photo3.jpg" alt="Photo 3" class="responsive-img">
-                </div>
-                <div class="col s12 m4">
-                    <img src="images/photo4.jpg" alt="Photo 4" class="responsive-img">
-                </div>
-                <div class="col s12 m4">
-                    <img src="images/photo5.jpg" alt="Photo 5" class="responsive-img">
-                </div>
-                <div class="col s12 m4">
-                    <img src="images/photo6.jpg" alt="Photo 6" class="responsive-img">
-                </div>
-                <div class="col s12 m4">
-                    <img src="images/photo7.jpg" alt="Photo 7" class="responsive-img">
-                </div>
-                <div class="col s12 m4">
-                    <img src="images/photo8.jpg" alt="Photo 8" class="responsive-img">
-                </div>
-                <div class="col s12 m4">
-                    <img src="images/photo9.jpg" alt="Photo 9" class="responsive-img">
-                </div>
-
-                <!-- Add more photos as needed -->
-            </div>
+    <section id="gallery" class="container mx-auto my-8 section">
+        <h2 class="text-2xl font-semibold">Gallery</h2>
+        <div class="gallery">
+            <img src="images/photo1.jpg" alt="Photo 1" class="responsive-img">
+            <img src="images/photo2.jpg" alt="Photo 2" class="responsive-img">
+            <img src="images/photo3.jpg" alt="Photo 3" class="responsive-img">
+            <img src="images/photo4.jpg" alt="Photo 4" class="responsive-img">
+            <img src="images/photo5.jpg" alt="Photo 5" class="responsive-img">
+            <img src="images/photo6.jpg" alt="Photo 6" class="responsive-img">
+            <img src="images/photo7.jpg" alt="Photo 7" class="responsive-img">
+            <img src="images/photo8.jpg" alt="Photo 8" class="responsive-img">
+            <img src="images/photo9.jpg" alt="Photo 9" class="responsive-img">
+            <!-- Add more photos as needed -->
         </div>
     </section>
 
+    <footer class="mt-8 bg-white shadow dark:bg-gray-800">
+        <div class="container p-4 mx-auto text-center">
+            &copy; 2024 bnogales
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.documentElement.classList.toggle('dark');
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Apply the theme preference from localStorage on page load
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
 </body>
 </html>
