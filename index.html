@@ -1,115 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link href="output.css" rel="stylesheet">
-  <style>
-    .container {
-        display: flex;
-        align-items: center;
-        margin: 20px 0;
-    }
-    .text {
-        flex: 1;
-    }
-    .image {
-        flex: 0 0 150px;
-        margin-left: 20px;
-    }
-    img {
-        max-width: 100%;
-        border-radius: 50%;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandy Nogales</title>
+    <link href="src/output.css" rel="stylesheet">
 </head>
 <body class="text-gray-900 bg-gray-100 dark:bg-gray-900 dark:text-gray-100">
-  <header class="bg-white shadow dark:bg-gray-800">
-    <div class="container p-4 mx-auto">
-      <h1 class="text-3xl font-bold">My Portfolio</h1>
-      <button id="theme-toggle" class="px-4 py-2 mt-2 text-white bg-blue-500 rounded">Dark Mode</button>
-    </div>
-  </header>
-  <main class="container p-4 mx-auto">
-    <section id="about" class="my-8">
-      <h2 class="text-2xl font-semibold">About Me</h2>
-      <div class="container">
-        <div class="text">
-          <p class="mt-2">
-            Hello! My name is Brandy Nogales, and I am currently pursuing an MSc in Cyber Security at ETHZ-EPFL, Zurich. 
-            I hold a BSc in Computer Sciences and a BSc in Psychology from the University of Geneva. My expertise includes 
-            a range of programming languages such as Python, C, C++, Java, JavaScript, and Scala. I have substantial 
-            experience in software engineering, cybersecurity, and artificial intelligence. In addition to my technical skills, 
-            I am proficient in English, French, and Spanish.
-          </p>
-          <p>
-            During my academic and professional career, I have led software engineering projects, developed full-stack 
-            applications, and conducted research in the field of emotionally intelligent peripherals for video games. 
-            My recent work at ETHZ focused on exploiting system vulnerabilities and machine learning attacks. I am 
-            passionate about literature, astronomy, photography, and boxing.
-          </p>
+    <nav class="p-4 bg-gray-800">
+        <div class="container flex items-center justify-between mx-auto">
+            <a href="#!" class="text-lg font-bold text-white">@Brandy_Nogales:~$ <span class="blinking-cursor">|</span></a>
+            <ul class="hidden space-x-6 md:flex">
+                <li><a href="#aboutme" class="text-white">/About Me</a></li>
+                <li><a href="#projects" class="text-white">/Projects</a></li>
+                <li><a href="#courses" class="text-white">/Courses</a></li>
+            </ul>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger md:hidden"><i class="text-white material-icons">menu</i></a>
         </div>
-        <div class="image">
-          <img src="/images/pp.jpg" alt="Brandy Nogales">
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="my-8">
-      <h2 class="text-2xl font-semibold">My Projects</h2>
-      <div class="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2 lg:grid-cols-3">
-        <div class="p-4 bg-white rounded-lg shadow dark:bg-gray-800">
-          <h3 class="text-xl font-bold">Fully Empathic Agent</h3>
-          <p class="mt-2">Description of the first project. Highlighting key features and technologies used.</p>
-        </div>
-        <div class="p-4 bg-white rounded-lg shadow dark:bg-gray-800">
-          <h3 class="text-xl font-bold">Article Aggregation</h3>
-          <p class="mt-2">Description of the second project. Highlighting key features and technologies used.</p>
-        </div>
-        <div class="p-4 bg-white rounded-lg shadow dark:bg-gray-800">
-          <h3 class="text-xl font-bold">EMOW</h3>
-          <p class="mt-2">Description of the third project. Highlighting key features and technologies used.</p>
-        </div>
-      </div>
-    </section>
-    <section id="contact" class="my-8">
-      <h2 class="text-2xl font-semibold">Get in touch</h2>
-      <form class="mt-4">
-        <div class="mb-4">
-          <label class="block text-sm font-medium" for="name">Name</label>
-          <input class="w-full p-2 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200" type="text" id="name" name="name">
-        </div>
-        <div class="mb-4">
-          <label class="block text-sm font-medium" for="email">Email</label>
-          <input class="w-full p-2 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200" type="email" id="email" name="email">
-        </div>
-        <div class="mb-4">
-          <label class="block text-sm font-medium" for="message">Message</label>
-          <textarea class="w-full p-2 border border-gray-300 rounded dark:bg-gray-700 dark:border-gray-600 dark:text-gray-200" id="message" name="message"></textarea>
-        </div>
-        <button class="px-4 py-2 text-white bg-blue-500 rounded" type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-  <footer class="mt-8 bg-white shadow dark:bg-gray-800">
-    <div class="container p-4 mx-auto text-center">
-      &copy; 2024 My Portfolio
-    </div>
-  </footer>
-  <script>
-    document.getElementById('theme-toggle').addEventListener('click', function() {
-      document.documentElement.classList.toggle('dark');
-      if (document.documentElement.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
-      }
-    });
+    </nav>
+    
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#aboutme">/About Me</a></li>
+        <li><a href="#projects">/Projects</a></li>
+        <li><a href="#courses">/Courses</a></li>
+    </ul>
 
-    // Apply the theme preference from localStorage on page load
-    if (localStorage.getItem('theme') === 'dark') {
-      document.documentElement.classList.add('dark');
-    }
-  </script>
+    <section id="aboutme" class="container mx-auto my-8 section">
+        <h2 class="text-2xl font-semibold">About Me</h2>
+        <div class="flex flex-wrap">
+            <div class="w-full md:w-2/3">
+                <p>Hello! My name is Brandy Nogales, and I am currently pursuing an MSc in Cyber Security at ETHZ-EPFL, Zurich. 
+                I hold a BSc in Computer Sciences and a BSc in Psychology from the University of Geneva. My expertise includes 
+                a range of programming languages such as Python, C, C++, Java, JavaScript, and Scala. I have substantial 
+                experience in software engineering, cybersecurity, and artificial intelligence. In addition to my technical skills, 
+                I am proficient in English, French, and Spanish.</p>
+                <p>During my academic and professional career, I have led software engineering projects, developed full-stack 
+                applications, and conducted research in the field of emotionally intelligent peripherals for video games. 
+                My recent work at ETHZ focused on exploiting system vulnerabilities and machine learning attacks. I am 
+                passionate about literature, astronomy, photography, and boxing.</p>
+            </div>
+            <div class="w-full md:w-1/3">
+                <img src="images/pic_p.jpg" alt="Brandy Nogales" class="mx-auto rounded-full md:mx-0">
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container mx-auto my-8 section">
+        <h2 class="text-2xl font-semibold">Projects</h2>
+        <table class="w-full mt-4 highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Description</th>
+                    <th>Technologies Used</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fully Empathic Agent</td>
+                    <td>Trained a model to detect facial expressions on human subjects from a camera and generate an avatar
+                    adjusting its facial expressions in real time to mimic the emotions perceived.</td>
+                    <td>Python, Machine Learning</td>
+                    <td><a href="Projects/FullyEmpathicAgent/description.pdf" target="_blank">View Description</a></td>
+                </tr>
+                <tr>
+                    <td>Article Aggregation</td>
+                    <td>Led the design and implementation of a system to aggregate articles on specified topics from various platforms (PubMed, Arxiv, etc.).</td>
+                    <td>Python, JavaScript</td>
+                    <td><a href="Projects/ArticleAggregation/description.pdf" target="_blank">View Description</a></td>
+                </tr>
+                <tr>
+                    <td>EMOW</td>
+                    <td>Developed the "EMOW" application with React Native in collaboration with the TECFA unit to serve as an emotional companion for students.</td>
+                    <td>React Native</td>
+                    <td><a href="Projects/EMOW/description.pdf" target="_blank">View Description</a></td>
+                </tr>
+                <tr>
+                    <td>CTFs</td>
+                    <td>Collection of exploits on different software and systems, focusing on software security, system security, binary exploitation, and more.</td>
+                    <td>Python, C, Ghidra</td>
+                    <td><a href="Projects/CTFs/writeup.pdf" target="_blank">Example Writeup</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="courses" class="container mx-auto my-8 section">
+        <h2 class="text-2xl font-semibold">Courses</h2>
+        <table class="w-full mt-4 highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Institution</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Information Security Lab</td>
+                    <td>ETHZ</td>
+                    <td><a href="https://appliedcrypto.ethz.ch/education/past-courses/as-2020/isl-autumn2020.html" target="_blank">View Course</a></td>
+                </tr>
+                <tr>
+                    <td>Applied Cryptography</td>
+                    <td>ETHZ</td>
+                    <td><a href="https://appliedcrypto.ethz.ch/education/past-courses/ss-2020/ac-ss2020.html" target="_blank">View Course</a></td>
+                </tr>
+                <tr>
+                    <td>Network Security</td>
+                    <td>ETHZ</td>
+                    <td><a href="https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2023W&ansicht=ALLE&lerneinheitId=173649&lang=en" target="_blank">View Course</a></td>
+                </tr>
+                <tr>
+                    <td>Advanced Cryptography</td>
+                    <td>EPFL</td>
+                    <td><a href="https://edu.epfl.ch/coursebook/en/advanced-cryptography-COM-501" target="_blank">View Course</a></td>
+                </tr>
+                <tr>
+                    <td>Software Engineering</td>
+                    <td>University of Geneva</td>
+                    <td><a href="https://edu.epfl.ch/coursebook/en/software-engineering-CS-305" target="_blank">View Course</a></td>
+                </tr>
+                <tr>
+                    <td>Artificial Intelligence</td>
+                    <td>University of Geneva</td>
+                    <td><a href="https://edu.epfl.ch/coursebook/en/artificial-intelligence-CS-401" target="_blank">View Course</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="languages_i_speak" class="container mx-auto my-8 section">
+        <h2 class="text-2xl font-semibold">Languages I Speak</h2>
+        <table class="w-full mt-4 highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Language</th>
+                    <th>Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Spanish</td>
+                    <td>Native</td>
+                </tr>
+                <tr>
+                    <td>French</td>
+                    <td>Bilingual</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>C1 - TOEFL</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 </body>
 </html>
