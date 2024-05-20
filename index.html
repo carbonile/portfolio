@@ -4,63 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandy Nogales</title>
-    <link href="src/output.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: black;
-            color: purple;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            margin: 20px 0;
-        }
-        .text {
-            flex: 1;
-        }
-        .image {
-            flex: 0 0 30px; /* Smaller image size */
-            margin-left: 20px;
-        }
-        img {
-            max-width: 50px;
-            border-radius: 0;
-        }
-        .nav-wrapper {
-            background-color: #000; /* Black background for the navbar */
-        }
-        .nav-wrapper a {
-            color: purple !important;
-        }
-        .sidenav {
-            background-color: #000;
-        }
-        .sidenav a {
-            color: purple !important;
-        }
-        table {
-            color: purple;
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid purple;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #333;
-        }
-        tr:nth-child(even) {
-            background-color: #444;
-        }
-        tr:hover {
-            background-color: #555;
-        }
-    </style>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">   
+
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
+
     <nav>
         <div class="nav-wrapper">
             <a href="#!" class="brand-logo">@Brandy_Nogales:~$ <span class="blinking-cursor">|</span></a>
@@ -79,128 +36,145 @@
         <li><a href="#courses">/Courses</a></li>
     </ul>
 
-    <section id="aboutme" class="container mx-auto my-8 section">
-        <h2 class="text-2xl font-semibold">About Me</h2>
-        <div class="flex flex-wrap">
-            <div class="w-full md:w-2/3">
-                <p>Hello! My name is Brandy Nogales, and I am currently pursuing an MSc in Cyber Security at ETHZ-EPFL, Zurich. 
-                I hold a BSc in Computer Sciences and a BSc in Psychology from the University of Geneva. My expertise includes 
-                a range of programming languages such as Python, C, C++, Java, JavaScript, and Scala. I have substantial 
-                experience in software engineering, cybersecurity, and artificial intelligence. In addition to my technical skills, 
-                I am proficient in English, French, and Spanish.</p>
-                <p>During my academic and professional career, I have led software engineering projects, developed full-stack 
-                applications, and conducted research in the field of emotionally intelligent peripherals for video games. 
-                My recent work at ETHZ focused on exploiting system vulnerabilities and machine learning attacks. I am 
-                passionate about literature, astronomy, photography, and boxing.</p>
-            </div>
-            <div class="w-full md:w-1/3 image">
-                <img src="images/pic_p.jpg" alt="Brandy Nogales" class="mx-auto rounded-full md:mx-0">
+    <section id="aboutme" class="section">
+        <div class="container">
+            <h2 class="header">About Me</h2>
+            <div class="row">
+                <div class="col s12 m8">
+                    <p>Hello! My name is Brandy Nogales, and I am currently pursuing an MSc in Cyber Security at ETHZ-EPFL, Zurich. 
+                    I hold a BSc in Computer Sciences and a BSc in Psychology from the University of Geneva. My expertise includes 
+                    a range of programming languages such as Python, C, C++, Java, JavaScript, and Scala. I have substantial 
+                    experience in software engineering, cybersecurity, and artificial intelligence. In addition to my technical skills, 
+                    I am proficient in English, French, and Spanish.</p>
+                    <p>During my academic and professional career, I have led software engineering projects, developed full-stack 
+                    applications, and conducted research in the field of emotionally intelligent peripherals for video games. 
+                    My recent work at ETHZ focused on exploiting system vulnerabilities and machine learning attacks. I am 
+                    passionate about literature, astronomy, photography, and boxing.</p>
+                </div>
+                <div class="col s12 m4">
+                    <img src="images/pic_p.jpg" alt="Brandy Nogales" class="responsive-img">
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="container mx-auto my-8 section">
-        <h2 class="text-2xl font-semibold">Projects</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Project Name</th>
-                    <th>Description</th>
-                    <th>Technologies Used</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Fully Empathic Agent</td>
-                    <td>Trained a model to detect facial expressions on human subjects from a camera and generate an avatar
-                    adjusting its facial expressions in real time to mimic the emotions perceived.</td>
-                    <td>Python, Machine Learning</td>
-                    <td><a href="https://github.com/carbonile/fully-empathic-agent" target="_blank">View Description</a></td>
-                </tr>
-                <tr>
-                    <td>Article Aggregation</td>
-                    <td>Led the design and implementation of a system to aggregate articles on specified topics from various platforms (PubMed, Arxiv, etc.).</td>
-                    <td>Python, JavaScript</td>
-                    <td><a href="Projects/ArticleAggregation/description.pdf" target="_blank">View Description</a></td>
-                </tr>
-                <tr>
-                    <td>EMOW</td>
-                    <td>Developed the "EMOW" application with React Native in collaboration with the TECFA unit to serve as an emotional companion for students.</td>
-                    <td>React Native</td>
-                    <td><a href="https://github.com/carbonile/emow" target="_blank">View Description</a></td>
-                </tr>
-                <tr>
-                    <td>CTFs</td>
-                    <td>Collection of exploits on different software and systems, focusing on software security, system security, binary exploitation, and more.</td>
-                    <td>Python, C, Ghidra</td>
-                    <td><a href="Projects/CTFs/writeup.pdf" target="_blank">Example Writeup</a></td>
-                </tr>
-            </tbody>
-        </table>
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="header">Projects</h2>
+            <table class="highlight responsive-table">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Description</th>
+                        <th>Technologies Used</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fully Empathic Agent</td>
+                        <td>Trained a model to detect facial expressions on human subjects from a camera and generate an avatar
+                        adjusting its facial expressions in real time to mimic the emotions perceived.</td>
+                        <td>Python, Machine Learning</td>
+                        <td><a href="Projects/FullyEmpathicAgent/description.pdf" target="_blank">View Description</a></td>
+                    </tr>
+                    <tr>
+                        <td>Article Aggregation</td>
+                        <td>Led the design and implementation of a system to aggregate articles on specified topics from various platforms (PubMed, Arxiv, etc.).</td>
+                        <td>Python, JavaScript</td>
+                        <td><a href="Projects/ArticleAggregation/description.pdf" target="_blank">View Description</a></td>
+                    </tr>
+                    <tr>
+                        <td>EMOW</td>
+                        <td>Developed the "EMOW" application with React Native in collaboration with the TECFA unit to serve as an emotional companion for students.</td>
+                        <td>React Native</td>
+                        <td><a href="Projects/EMOW/description.pdf" target="_blank">View Description</a></td>
+                    </tr>
+                    <tr>
+                        <td>CTFs</td>
+                        <td>Collection of exploits on different software and systems, focusing on software security, system security, binary exploitation, and more.</td>
+                        <td>Python, C, Ghidra</td>
+                        <td><a href="Projects/CTFs/writeup.pdf" target="_blank">Example Writeup</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
-    <section id="courses" class="container mx-auto my-8 section">
-        <h2 class="text-2xl font-semibold">Courses</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Course Name</th>
-                    <th>Institution</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Information Security Lab</td>
-                    <td>ETHZ</td>
-                    <td><a href="https://appliedcrypto.ethz.ch/education/past-courses/as-2020/isl-autumn2020.html" target="_blank">View Course</a></td>
-                </tr>
-                <tr>
-                    <td>Applied Cryptography</td>
-                    <td>ETHZ</td>
-                    <td><a href="https://appliedcrypto.ethz.ch/education/past-courses/ss-2020/ac-ss2020.html" target="_blank">View Course</a></td>
-                </tr>
-                <tr>
-                    <td>Network Security</td>
-                    <td>ETHZ</td>
-                    <td><a href="https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2023W&ansicht=ALLE&lerneinheitId=173649&lang=en" target="_blank">View Course</a></td>
-                </tr>                
-                <tr>
-                    <td>Software Engineering</td>
-                    <td>University of Geneva</td>
-                    <td><a href="https://edu.epfl.ch/coursebook/en/software-engineering-CS-305" target="_blank">View Course</a></td>
-                </tr>
-                <tr>
-                    <td>Artificial Intelligence</td>
-                    <td>University of Geneva</td>
-                    <td><a href="https://edu.epfl.ch/coursebook/en/artificial-intelligence-CS-401" target="_blank">View Course</a></td>
-                </tr>
-            </tbody>
-        </table>
+    <section id="courses" class="section">
+        <div class="container">
+            <h2 class="header">Courses</h2>
+            <table id="coursesTable" class="highlight responsive-table">
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Institution</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Information Security Lab</td>
+                        <td>ETHZ</td>
+                        <td><a href="https://appliedcrypto.ethz.ch/education/past-courses/as-2020/isl-autumn2020.html" target="_blank">View Course</a></td>
+                    </tr>
+                    <tr>
+                        <td>Applied Cryptography</td>
+                        <td>ETHZ</td>
+                        <td><a href="https://appliedcrypto.ethz.ch/education/past-courses/ss-2020/ac-ss2020.html" target="_blank">View Course</a></td>
+                    </tr>
+                    <tr>
+                        <td>Network Security</td>
+                        <td>ETHZ</td>
+                        <td><a href="https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2023W&ansicht=ALLE&lerneinheitId=173649&lang=en" target="_blank">View Course</a></td>
+                    </tr>
+                    <tr>
+                        <td>Advanced Cryptography</td>
+                        <td>EPFL</td>
+                        <td><a href="https://edu.epfl.ch/coursebook/en/advanced-cryptography-COM-501" target="_blank">View Course</a></td>
+                    </tr>
+                    <tr>
+                        <td>Software Engineering</td>
+                        <td>University of Geneva</td>
+                        <td><a href="https://edu.epfl.ch/coursebook/en/software-engineering-CS-305" target="_blank">View Course</a></td>
+                    </tr>
+                    <tr>
+                        <td>Artificial Intelligence</td>
+                        <td>University of Geneva</td>
+                        <td><a href="https://edu.epfl.ch/coursebook/en/artificial-intelligence-CS-401" target="_blank">View Course</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
-    <section id="languages_i_speak" class="container mx-auto my-8 section">
-        <h2 class="text-2xl font-semibold">Languages I Speak</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Language</th>
-                    <th>Level</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Spanish</td>
-                    <td>Native</td>
-                </tr>
-                <tr>
-                    <td>French</td>
-                    <td>Bilingual</td>
-                </tr>
-                <tr>
-                    <td>English</td>
-                    <td>C1 - TOEFL</td>
-                </tr>
-            </tbody>
-       
+    <section id="languages_i_speak" class="section">
+        <div class="container">
+            <h2 class="header">Languages I Speak</h2>
+            <table id="languagesTable" class="highlight responsive-table">
+                <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Spanish</td>
+                        <td>Native</td>
+                    </tr>
+                    <tr>
+                        <td>French</td>
+                        <td>Bilingual</td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>C1 - TOEFL</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+</body>
+</html>

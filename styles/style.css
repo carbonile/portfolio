@@ -1,0 +1,140 @@
+:root {
+    --primary-color: #151515; 
+    --text-color: #9b59b6; 
+    --nav-bg-color: #151515; 
+    --body-bg-color: #151515; 
+    --link-color: #8e44ad; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#coursesTable tbody td,
+#coursesTable thead th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#languagesTable tbody td,
+#languagesTable thead th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+body, html {
+    height: 100%;
+    background-color: var(--body-bg-color); /* Black background */
+}
+
+/* Terminal Font */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color); 
+    font-size: 16px;
+    padding: 20px;
+}
+
+/* Navbar customizations */
+.nav-wrapper {
+    background-color: var(--body-bg-color); 
+    box-shadow: none;
+}
+
+.nav-wrapper a {
+    color: var(--text-color); /* Purple text */
+}
+
+/* Hiding the sidenav trigger and adjusting logo */
+.sidenav-trigger {
+    display: block;
+}
+
+@media screen and (min-width: 993px) {
+    .sidenav-trigger {
+        display: none;
+    }
+}
+
+.brand-logo {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-color); 
+    font-size: 16px; /* Adjusted font size */
+    display: flex;
+    align-items: center;
+}
+
+/* Existing styles */
+@media screen and (max-width: 600px) {
+    .brand-logo {
+        font-size: 10px; /* Even smaller font size for mobile */
+        padding-left: 5px; /* Reduce padding if necessary */
+        padding-right: 5px; /* Reduce padding if necessary */
+    }
+}
+
+/* Additional suggestion */
+@media screen and (max-width: 400px) {
+    .brand-logo {
+        font-size: 8px; /* Further reduction for very small devices */
+    }
+}
+
+/* Section Styling */
+.section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Table customizations to fit terminal theme */
+table, th, td {
+    border: 1px solid var(--text-color); /* Purple borders */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--body-bg-color); /* Black background */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--body-bg-color); /* Darker background for headers */
+}
+
+a {
+    color: var(--text-color); /* Purple text for links */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5a2a80; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7d3e99; 
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.blinking-cursor {
+    animation: blink 1s step-end infinite;
+    color: var(--text-color); /* Ensure the cursor color matches the terminal text */
+    font-size: 22px; /* Ensure the cursor font size matches the text */
+ }
