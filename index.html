@@ -19,12 +19,12 @@
             flex: 1;
         }
         .image {
-            flex: 0 0 100px; /* Smaller image size */
+            flex: 0 0 30px; /* Smaller image size */
             margin-left: 20px;
         }
         img {
-            max-width: 100%;
-            border-radius: 50%;
+            max-width: 50px;
+            border-radius: 0;
         }
         .nav-wrapper {
             background-color: #000; /* Black background for the navbar */
@@ -40,12 +40,23 @@
         }
         table {
             color: purple;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
-        table thead {
-            background-color: #000;
+        th, td {
+            border: 1px solid purple;
+            padding: 8px;
+            text-align: left;
         }
-        table tbody tr:hover {
+        th {
             background-color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #444;
+        }
+        tr:hover {
+            background-color: #555;
         }
     </style>
 </head>
@@ -90,7 +101,7 @@
 
     <section id="projects" class="container mx-auto my-8 section">
         <h2 class="text-2xl font-semibold">Projects</h2>
-        <table class="w-full mt-4 highlight responsive-table">
+        <table>
             <thead>
                 <tr>
                     <th>Project Name</th>
@@ -131,7 +142,7 @@
 
     <section id="courses" class="container mx-auto my-8 section">
         <h2 class="text-2xl font-semibold">Courses</h2>
-        <table class="w-full mt-4 highlight responsive-table">
+        <table>
             <thead>
                 <tr>
                     <th>Course Name</th>
@@ -154,12 +165,7 @@
                     <td>Network Security</td>
                     <td>ETHZ</td>
                     <td><a href="https://www.vorlesungen.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2023W&ansicht=ALLE&lerneinheitId=173649&lang=en" target="_blank">View Course</a></td>
-                </tr>
-                <tr>
-                    <td>Advanced Cryptography</td>
-                    <td>EPFL</td>
-                    <td><a href="https://edu.epfl.ch/coursebook/en/advanced-cryptography-COM-501" target="_blank">View Course</a></td>
-                </tr>
+                </tr>                
                 <tr>
                     <td>Software Engineering</td>
                     <td>University of Geneva</td>
@@ -176,7 +182,7 @@
 
     <section id="languages_i_speak" class="container mx-auto my-8 section">
         <h2 class="text-2xl font-semibold">Languages I Speak</h2>
-        <table class="w-full mt-4 highlight responsive-table">
+        <table>
             <thead>
                 <tr>
                     <th>Language</th>
@@ -197,7 +203,4 @@
                     <td>C1 - TOEFL</td>
                 </tr>
             </tbody>
-        </table>
-    </section>
-</body>
-</html>
+       
